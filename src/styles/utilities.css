@@ -14,11 +14,11 @@
 
 /* Reusable flexbox classes */
 
-flex {
+.flex {
   display: flex;
 }
 
-flex-col {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
