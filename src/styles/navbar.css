@@ -37,7 +37,7 @@ nav {
   border-radius: 2px;
   font-weight: 400;
   text-align: center;
-  min-width: 112px;
+  min-width: 7rem;
   height: 2rem;
 }
 
@@ -47,6 +47,6 @@ nav {
   border-radius: 2px;
   font-weight: 400;
   text-align: center;
-  min-width: 74px;
+  min-width: 4.6rem;
   height: 2rem;
 }
