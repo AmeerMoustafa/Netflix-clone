@@ -1,5 +1,5 @@
 function Loginpage() {
-  return <h1>Hello Group</h1>;
+  return <div className="hero-container-parent"></div>;
 }
 
 export default Loginpage;
