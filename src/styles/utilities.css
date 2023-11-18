@@ -48,3 +48,9 @@ ul {
 a:hover {
   text-decoration: underline;
 }
+
+button {
+  color: var(--text-color);
+  cursor: pointer;
+  text-transform: uppercase;
+}
