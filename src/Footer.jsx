@@ -4,7 +4,9 @@ import "./styles/footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>Questions? Contact us.</p>
+      <p>
+        <a href="#">Questions? Contact us.</a>
+      </p>
       <div className="footer-columns">
         <ul>
           <li>

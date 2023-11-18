@@ -1,24 +1,27 @@
+@import url(./utilities.css);
+
 .footer {
   max-width: 70%;
   margin: 1rem auto;
   overflow: auto;
 }
 
-.footer > p {
-  margin-bottom: 1.5rem;
+.footer p {
+  margin-bottom: 2rem;
 }
 
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-gap: 1rem;
 }
 
-.footer > li {
-  line-height: 1.9rem;
+.footer-columns li {
+  margin-bottom: 0.7rem;
 }
 
-.footer > a {
+.footer a {
   color: var(--footer-link);
   font-size: 0.9rem;
+  text-decoration: none;
 }
