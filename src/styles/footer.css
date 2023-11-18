@@ -1,0 +1,24 @@
+.footer {
+  max-width: 70%;
+  margin: 1rem auto;
+  overflow: auto;
+}
+
+.footer > p {
+  margin-bottom: 1.5rem;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer > li {
+  line-height: 1.9rem;
+}
+
+.footer > a {
+  color: var(--footer-link);
+  font-size: 0.9rem;
+}

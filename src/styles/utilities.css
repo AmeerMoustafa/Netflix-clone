@@ -18,6 +18,7 @@
   --background: #000;
   --text-color: white;
   --grey: rgb(45, 45, 45);
+  --footer-link: #737373;
   --secondary-grey: rgb(15, 15, 15);
 }
 
@@ -37,4 +38,13 @@
 img {
   width: 100%;
   height: auto;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
