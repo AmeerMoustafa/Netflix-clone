@@ -1,0 +1,24 @@
+/* Font Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+
+/* Color variables */
+
+:root {
+  --main-red: rgb(229, 9, 20);
+  --background: #000;
+  --text-color: white;
+  --grey: rgb(45, 45, 45);
+  --secondary-grey: rgb(15, 15, 15);
+}
+
+/* Reusable flexbox classes */
+
+flex {
+  display: flex;
+}
+
+flex-col {
+  display: flex;
+  flex-direction: column;
+}
