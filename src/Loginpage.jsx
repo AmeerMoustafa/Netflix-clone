@@ -8,7 +8,11 @@ function Loginpage() {
         <div className="navbar-logo-container">
           <img src="../src/assets/loginpage/netflixlogo.svg" />
         </div>
-        <div>
+        <div className="flex navbar-signin-container">
+          <select>
+            <option>English</option>
+            <option>العربية</option>
+          </select>
           <button>Sign in</button>
         </div>
       </nav>
