@@ -117,7 +117,9 @@ const Loginpage = () => {
         </div>
       </section>
 
-      <section className="parent-container"></section>
+      <section className="parent-container">
+        <Footer />
+      </section>
     </>
   );
 };
