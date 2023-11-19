@@ -1,0 +1,28 @@
+.slider-section {
+  background-color: var(--grey);
+}
+
+.slider-title {
+  padding-left: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.movie-title {
+  color: var(--text-color);
+}
+
+.movies-slider-container {
+  position: relative;
+  align-items: center;
+}
+.movie-card {
+  width: 280px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+  align-items: center;
+  gap: 0.5rem;
+}
