@@ -73,6 +73,11 @@
 }
 
 .hero-form-container input[type="text"] {
-  color: white;
   background-color: transparent;
+}
+
+.hero-form-container button {
+  background-color: var(--main-red);
+  color: var(--text-color);
+  font-size: 1.5rem;
 }
