@@ -3,6 +3,7 @@ import "../styles/loginpage.css";
 import Signup from "../components/loginpage/Signup";
 import LoginNav from "../components/loginpage/LoginNav";
 import Accordion from "../components/loginpage/Accordion";
+import Footer from "../components/reusable/Footer";
 
 const Loginpage = () => {
   return (
@@ -115,6 +116,8 @@ const Loginpage = () => {
           <Signup />
         </div>
       </section>
+
+      <section className="parent-container"></section>
     </>
   );
 };
