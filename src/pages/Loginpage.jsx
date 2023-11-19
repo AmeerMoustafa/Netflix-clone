@@ -1,10 +1,11 @@
-import Navbar from "../components/reusable/Navbar";
-import Footer from "../components/reusable/Footer";
-function Loginpage() {
-  return <div className="hero-container-parent">
-    <Navbar />
-    <Footer />
-  </div>;
+import React from 'react';
+
+const Loginpage = () => {
+    return (
+        <div>
+            asd
+        </div>
+    );
 }
 
 export default Loginpage;
