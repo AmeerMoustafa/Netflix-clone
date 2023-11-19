@@ -60,8 +60,10 @@ const Accordion = () => {
                 : "flex faq-content-container"
             }
           >
-            <div className="faq-content">
-              <p>{item.answer}</p>
+            <div className="faq-content-parent">
+              <div className="faq-content">
+                <p>{item.answer}</p>
+              </div>
             </div>
           </div>
         </div>

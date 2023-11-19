@@ -269,6 +269,10 @@
   padding: 1rem 2rem;
 }
 
+.accordion-item:hover {
+  background-color: rgb(65, 65, 65);
+}
+
 .item-toggle {
   font-size: 2rem;
 }
@@ -280,6 +284,10 @@
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-content {
+  padding: 1rem;
 }
 
 .accordion-active {
