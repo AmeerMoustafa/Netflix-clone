@@ -9,13 +9,13 @@
   color: var(--text-color);
 }
 
-.movie-title {
-  color: var(--text-color);
-}
-
 .movies-slider-container {
   position: relative;
   align-items: center;
+}
+
+.movie-title {
+  color: var(--text-color);
 }
 .movie-card {
   width: 280px;
