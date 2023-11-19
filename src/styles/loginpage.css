@@ -88,7 +88,7 @@
   padding: 1rem;
   border: 2px solid var(--grey);
   border-radius: 5px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-form-container input[type="text"]::placeholder {
