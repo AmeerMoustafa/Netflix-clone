@@ -73,6 +73,42 @@ function Loginpage() {
       </section>
 
       {/* watch everywhere section */}
+
+      <section className="flex feature-parent">
+        <div className="flex feature-child">
+          <div className="flex-col feature-content-container">
+            <h2>Watch everywhere</h2>
+            <p>
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV.
+            </p>
+          </div>
+
+          <div className="watch-image-container">
+            <img src="./src/assets/loginpage/device-pile.png" />
+            <video
+              className="watch-video"
+              src="./src/assets/loginpage/watch-everywhere.m4v"
+              autoPlay
+              loop
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* kids section */}
+      <section className="flex feature-parent">
+        <div className="flex kids-section-child feature-child">
+          <img src="./src/assets/loginpage/kids-image.png" />
+          <div className="flex-col feature-content-container">
+            <h2>Create profiles for kids</h2>
+            <p>
+              Send kids on adventures with their favorite characters in a space
+              made just for them—free with your membership.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

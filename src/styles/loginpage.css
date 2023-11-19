@@ -111,7 +111,7 @@
 .feature-parent {
   border-top: 10px solid var(--grey);
   font-family: "Poppins", sans-serif;
-  padding: 3rem;
+  padding: 4rem;
   background-color: var(--background);
   align-items: center;
   justify-content: center;
@@ -119,7 +119,7 @@
 
 .feature-child {
   gap: 1rem;
-  width: 70%;
+  width: 65%;
 }
 
 .feature-content-container {
@@ -149,9 +149,7 @@
 
 .tv-image {
   z-index: 2;
-  display: block;
   width: 100%;
-  height: auto;
 }
 
 .tv-video {
@@ -176,7 +174,7 @@
 }
 
 .download-overlay-content {
-  margin-right: 4rem;
+  margin-right: 3rem;
 }
 
 .download-overlay-container {
@@ -206,4 +204,26 @@
 .overlay-subtitle {
   font-size: 0.8rem;
   color: #0071eb;
+}
+
+/* Watch everywhere styles */
+
+.watch-image-container {
+  width: 70%;
+  z-index: 1;
+  position: relative;
+}
+
+.watch-video {
+  width: 63%;
+  z-index: -1;
+  position: absolute;
+  left: 19%;
+  top: 10%;
+}
+
+/* kids section styles */
+
+.kids-section-child {
+  width: 70%;
 }
