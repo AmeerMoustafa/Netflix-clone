@@ -28,7 +28,7 @@ function Loginpage() {
           </span>
 
           <div className="flex hero-form-container">
-            <input type="text" placeholder="e-mail" />
+            <input type="text" placeholder="Email address" />
             <button>{"Get Started >"}</button>
           </div>
         </div>
