@@ -16,7 +16,6 @@ function Loginpage() {
           <button>Sign in</button>
         </div>
       </nav>
-
       <div className="flex-col hero-content-container">
         <h1>Unlimited Movies, TV shows, and more</h1>
         <span>Watch anywhere. Cancel anytime.</span>
