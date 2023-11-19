@@ -1,5 +1,5 @@
-import "../src/styles/utilities.css";
-import "../src/styles/loginpage.css";
+import "../styles/utilities.css";
+import "../styles/loginpage.css";
 
 function Loginpage() {
   return (
@@ -21,14 +21,14 @@ function Loginpage() {
         <h1>Unlimited Movies, TV shows, and more</h1>
         <span>Watch anywhere. Cancel anytime.</span>
 
-        <div className="hero-signup-container">
+        <div className="flex-col hero-signup-container">
           <span>
             Ready to watch? Enter your email to create or restart your
             membership.
           </span>
 
           <div className="flex hero-form-container">
-            <input type="text" />
+            <input type="text" placeholder="e-mail" />
             <button>{"Get Started >"}</button>
           </div>
         </div>
