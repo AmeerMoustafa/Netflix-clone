@@ -17,11 +17,9 @@ function Loginpage() {
         </div>
       </nav>
 
-      <div className="hero-content-container">
-        <div className="hero-heading-container">
-          <h1>Unlimited Movies, TV shows, and more</h1>
-          <span>Watch anywhere. Cancel anytime.</span>
-        </div>
+      <div className="flex-col hero-content-container">
+        <h1>Unlimited Movies, TV shows, and more</h1>
+        <span>Watch anywhere. Cancel anytime.</span>
 
         <div className="hero-signup-container">
           <span>
@@ -29,7 +27,7 @@ function Loginpage() {
             membership.
           </span>
 
-          <div className="hero-form-container">
+          <div className="flex hero-form-container">
             <input type="text" />
             <button>{"Get Started >"}</button>
           </div>
