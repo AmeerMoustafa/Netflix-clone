@@ -16,6 +16,25 @@ function Loginpage() {
           <button>Sign in</button>
         </div>
       </nav>
+
+      <div className="hero-content-container">
+        <div className="hero-heading-container">
+          <h1>Unlimited Movies, TV shows, and more</h1>
+          <span>Watch anywhere. Cancel anytime.</span>
+        </div>
+
+        <div className="hero-signup-container">
+          <span>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </span>
+
+          <div className="hero-form-container">
+            <input type="text" />
+            <button>{"Get Started >"}</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
