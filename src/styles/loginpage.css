@@ -287,3 +287,73 @@
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
+
+/* Media Queries */
+
+/* Laptops */
+
+@media screen and (max-width: 1440px) {
+  .navbar-parent {
+    width: 85%;
+  }
+
+  .hero-content-container {
+    width: 80%;
+  }
+
+  .child-container {
+    width: 80%;
+  }
+}
+
+/* Tablets */
+
+@media screen and (max-width: 768px) {
+  .navbar-parent {
+    width: 95%;
+  }
+
+  .hero-content-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content-container span {
+    font-size: 1rem;
+  }
+
+  .hero-form-container {
+    justify-content: center;
+  }
+
+  .hero-form-container input[type="text"] {
+    width: 54%;
+  }
+
+  .hero-signup-container span {
+    font-size: 1rem;
+  }
+
+  .child-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-content-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-content-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .feature-content-container p {
+    font-size: 1rem;
+  }
+
+  .downloads-child-container,
+  .kids-section-child {
+    flex-direction: column-reverse;
+  }
+}

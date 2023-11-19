@@ -27,3 +27,13 @@
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries */
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 100%;
+  }
+}

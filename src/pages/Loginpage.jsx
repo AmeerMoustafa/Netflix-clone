@@ -46,7 +46,7 @@ const Loginpage = () => {
 
       {/* downloads Features section */}
       <section className="flex parent-container">
-        <div className="flex child-container">
+        <div className="flex downloads-child-container child-container">
           <div className="download-image-container">
             <img src="./src/assets/loginpage/downloading-image.jpg" />
             <div className="flex download-overlay-container">
