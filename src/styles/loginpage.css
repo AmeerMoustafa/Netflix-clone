@@ -71,6 +71,11 @@
 }
 
 .hero-signup-container span {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.hero-signup-container span {
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.5;
@@ -108,7 +113,7 @@
 
 /* Feature style */
 
-.feature-parent {
+.parent-container {
   border-top: 10px solid var(--grey);
   font-family: "Poppins", sans-serif;
   padding: 4rem;
@@ -117,7 +122,7 @@
   justify-content: center;
 }
 
-.feature-child {
+.child-container {
   gap: 1rem;
   width: 65%;
 }
@@ -226,4 +231,59 @@
 
 .kids-section-child {
   width: 70%;
+}
+
+/* FAQ section */
+
+.faq-child-container {
+  gap: 1rem;
+}
+
+.faq-child-container > h2 {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+/* Accordian component styling */
+
+.accordion-parent {
+  gap: 0.5rem;
+}
+
+.faq-title {
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-title > h2 {
+  font-weight: 400;
+}
+
+.accordion-item {
+  color: white;
+  background-color: #2d2d2d;
+  padding: 1rem 2rem;
+}
+
+.item-toggle {
+  font-size: 2rem;
+}
+
+.faq-content-container {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-active {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }

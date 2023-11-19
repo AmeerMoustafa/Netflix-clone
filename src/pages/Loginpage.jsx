@@ -2,8 +2,9 @@ import "../styles/utilities.css";
 import "../styles/loginpage.css";
 import Signup from "../components/loginpage/Signup";
 import LoginNav from "../components/loginpage/LoginNav";
+import Accordion from "../components/loginpage/Accordion";
 
-function Loginpage() {
+const Loginpage = () => {
   return (
     <>
       {/* Hero section */}
@@ -13,22 +14,15 @@ function Loginpage() {
           <h1>Unlimited Movies, TV shows, and more</h1>
           <span>Watch anywhere. Cancel anytime.</span>
 
-          <div className="flex-col hero-signup-container">
-            <span>
-              Ready to watch? Enter your email to create or restart your
-              membership.
-            </span>
-
-            <Signup />
-          </div>
+          <Signup />
         </div>
       </section>
 
       {/* Features section */}
 
       {/* TV Features section */}
-      <section className="flex feature-parent">
-        <div className="flex feature-child">
+      <section className="flex parent-container">
+        <div className="flex child-container">
           <div className="flex-col feature-content-container">
             <h2>Enjoy on your TV</h2>
             <p>
@@ -50,8 +44,8 @@ function Loginpage() {
       </section>
 
       {/* downloads Features section */}
-      <section className="flex feature-parent">
-        <div className="flex feature-child">
+      <section className="flex parent-container">
+        <div className="flex child-container">
           <div className="download-image-container">
             <img src="./src/assets/loginpage/downloading-image.jpg" />
             <div className="flex download-overlay-container">
@@ -74,8 +68,8 @@ function Loginpage() {
 
       {/* watch everywhere section */}
 
-      <section className="flex feature-parent">
-        <div className="flex feature-child">
+      <section className="flex parent-container">
+        <div className="flex child-container">
           <div className="flex-col feature-content-container">
             <h2>Watch everywhere</h2>
             <p>
@@ -97,8 +91,8 @@ function Loginpage() {
       </section>
 
       {/* kids section */}
-      <section className="flex feature-parent">
-        <div className="flex kids-section-child feature-child">
+      <section className="flex parent-container">
+        <div className="flex kids-section-child child-container">
           <img src="./src/assets/loginpage/kids-image.png" />
           <div className="flex-col feature-content-container">
             <h2>Create profiles for kids</h2>
@@ -109,8 +103,20 @@ function Loginpage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ section */}
+
+      <section className="flex parent-container">
+        <div className="flex-col faq-child-container child-container">
+          <h2>Frequently Asked Questions</h2>
+
+          <Accordion />
+
+          <Signup />
+        </div>
+      </section>
     </>
   );
-}
+};
 
 export default Loginpage;

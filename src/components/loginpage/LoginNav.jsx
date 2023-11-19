@@ -1,4 +1,4 @@
-function LoginNav() {
+const LoginNav = () => {
   return (
     <nav className="flex navbar-parent">
       <div className="navbar-logo-container">
@@ -13,6 +13,6 @@ function LoginNav() {
       </div>
     </nav>
   );
-}
+};
 
 export default LoginNav;
