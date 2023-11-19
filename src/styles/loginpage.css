@@ -256,7 +256,6 @@
   font-size: 0.9rem;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .faq-title > h2 {
@@ -264,6 +263,7 @@
 }
 
 .accordion-item {
+  cursor: pointer;
   color: white;
   background-color: #2d2d2d;
   padding: 1rem 2rem;

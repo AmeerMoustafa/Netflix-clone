@@ -46,8 +46,8 @@ const Accordion = () => {
   return (
     <div className="flex-col accordion-parent">
       {faq.map((item, i) => (
-        <div key={i} className="accordion-item">
-          <div className="flex faq-title" onClick={() => toggle(i)}>
+        <div key={i} className="accordion-item" onClick={() => toggle(i)}>
+          <div className="flex faq-title">
             <h2>{item.question}</h2>
             <span className="item-toggle">
               {selected === i ? "\u00D7" : "+"}
