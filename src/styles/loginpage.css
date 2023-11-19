@@ -105,3 +105,109 @@
   font-weight: 500;
   border-radius: 5px;
 }
+
+/* Feature style */
+
+.feature-parent {
+  border-top: 10px solid var(--grey);
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+  background-color: var(--background);
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-child {
+  gap: 1rem;
+  width: 70%;
+}
+
+.feature-content-container {
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.feature-content-container > h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.feature-content-container > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* TV section styles */
+
+.tv-image-container {
+  width: 70%;
+  z-index: 1;
+  position: relative;
+}
+
+.tv-image {
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tv-video {
+  width: 80%;
+  height: 55%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 20%;
+  left: 13%;
+}
+
+/* Download section styles */
+
+.downloads-content-container {
+  gap: 0.9rem;
+}
+
+.downloads-content-container h2 {
+  line-height: 1.2;
+}
+
+.download-image-container {
+  width: 70%;
+  position: relative;
+}
+
+.download-overlay-content {
+  margin-right: 4rem;
+}
+
+.download-overlay-container {
+  padding: 1rem;
+  border: 3px solid var(--grey);
+  background-color: var(--background);
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  gap: 0.5rem;
+  width: 55%;
+  top: 69%;
+  left: 22%;
+  position: absolute;
+}
+
+.download-overlay-container img {
+  width: 15%;
+}
+
+.overlay-title {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.overlay-subtitle {
+  font-size: 0.8rem;
+  color: #0071eb;
+}
