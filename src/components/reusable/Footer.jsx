@@ -1,4 +1,5 @@
-import "./styles/footer.css";
+import "../../styles/utilities.css"
+import "../../styles/reusablecomponents/footer.css";
 
 const Footer = () => {
   return (

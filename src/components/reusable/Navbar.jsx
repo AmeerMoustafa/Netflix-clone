@@ -1,4 +1,5 @@
-import "./styles/navbar.css";
+import "../../styles/utilities.css"
+import "../../styles/reusablecomponents/navbar.css";
 
 const Navbar = () => {
   return (
