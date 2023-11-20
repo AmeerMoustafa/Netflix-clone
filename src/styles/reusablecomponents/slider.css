@@ -3,6 +3,7 @@
   padding-top: 4rem;
   padding-bottom: 2rem;
   color: var(--text-color);
+  align-self: start;
 }
 
 .movies-slider-container {
@@ -13,19 +14,22 @@
 }
 
 .slider-container {
-  flex-grow: 1;
   position: relative;
   transition: transform 250ms ease-in-out;
+}
+
+.slider-container a {
+  text-decoration: none;
 }
 
 .movie-title {
   color: var(--text-color);
 }
+
 .movie-card {
-  flex: 0 0 20%;
-  max-width: 20%;
-  height: 100%;
-  display: inline-block;
+  width: 15vw;
+  display: flex;
+  text-align: center;
   cursor: pointer;
   position: relative;
   padding: 0.5rem;
@@ -34,7 +38,8 @@
 }
 
 .movie-card > img {
-  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
 }
 
 .slider-action {
