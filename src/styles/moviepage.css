@@ -187,3 +187,43 @@
   margin-top: 5em;
   width: 25%;
 }
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-container {
+    width: 100%;
+  }
+  .hero-description,
+  .hero-starring {
+    font-size: 0.5em;
+  }
+  .hero-starring {
+    font-size: 0.5em;
+  }
+  .hero-nav-left span {
+    font-size: 0.7em;
+  }
+  .comingsoon {
+    margin: 1em;
+  }
+  .morelikethis {
+    margin: 1em;
+  }
+
+  .more-movies {
+    flex-basis: 50%;
+    margin: 5% 0;
+  }
+
+  .morelikethis-container img {
+    flex-basis: 48%;
+  }
+
+  .tudum-promote {
+    width: 50%;
+  }
+}

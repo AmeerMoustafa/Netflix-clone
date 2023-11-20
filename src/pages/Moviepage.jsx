@@ -9,6 +9,7 @@ function Moviepage() {
   return (
     <div className="moviepage">
       <MovieDescription></MovieDescription>
+      <MoreDetails></MoreDetails>
       <MoreLikeThis></MoreLikeThis>
       <ComingSoon></ComingSoon>
     </div>

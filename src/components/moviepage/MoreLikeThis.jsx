@@ -3,18 +3,18 @@ import "../../styles/moviepage.css";
 
 const MoreLikeThis = () => {
   let arr = [
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
-    `src/assets/loginpage/hero-background.jpeg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
+    `src/assets/moviepage/movie.jpg`,
   ];
 
   return (
