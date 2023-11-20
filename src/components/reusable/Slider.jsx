@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../styles/reusablecomponents/slider.css";
 import "../../styles/utilities.css";
 import MovieCard from "./MovieCard";
 
-const Slider = ({ arr , title}) => {
+const Slider = ({ arr, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const onSliderClicked = (direction) => {
@@ -25,14 +25,17 @@ const Slider = ({ arr , title}) => {
       <div className="movies-slider-container flex">
         <div
           className="slider-action left flex"
-          onClick={() => onSliderClicked("left")}></div>
+          onClick={() => onSliderClicked("left")}
+        ></div>
         <div className="slider-container flex" style={sliderStyle}>
-
-          {arr.map((movie) => <MovieCard movie={movie}/>)}
+          {arr.map((movie) => (
+            <MovieCard movie={movie} />
+          ))}
         </div>
         <div
           className="slider-action right flex"
-          onClick={() => onSliderClicked("right")}></div>
+          onClick={() => onSliderClicked("right")}
+        ></div>
       </div>
     </div>
   );

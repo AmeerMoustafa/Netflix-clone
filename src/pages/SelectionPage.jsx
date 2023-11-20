@@ -129,16 +129,16 @@ const SelectionPage = () => {
       .catch((err) => console.error("error:" + err));
   };
 
-  // useEffect(() => {
-  //   getPopularMovies();
-  //   getRomanticMovies();
-  //   getComedyMovies();
-  //   getActionMovies();
-  //   getHollywoodMovies();
-  //   getActionAndAdventureMovies();
-  //   getFamilyMovies();
-  //   getHorrorMovies();
-  // }, []);
+  useEffect(() => {
+    getPopularMovies();
+    getRomanticMovies();
+    getComedyMovies();
+    getActionMovies();
+    getHollywoodMovies();
+    getActionAndAdventureMovies();
+    getFamilyMovies();
+    getHorrorMovies();
+  }, []);
 
   return (
     <div className="page-wrapper">
