@@ -1,14 +1,15 @@
-import "../../styles/utilities.css"
+import "../../styles/utilities.css";
 import "../../styles/reusablecomponents/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className=".main-nav">
       <div className="nav-container flex">
         <div className="nav-left flex">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-            alt="Neflix logo"></img>
+            alt="Neflix logo"
+          ></img>
         </div>
         <div className="nav-right flex">
           <span>UNLIMITED TV SHOWS & MOVIES</span>
