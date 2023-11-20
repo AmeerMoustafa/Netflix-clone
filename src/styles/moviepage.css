@@ -124,3 +124,66 @@
 .details-title {
   font-size: 1.5em;
 }
+
+/* MoreLikeThis Component */
+
+.morelikethis {
+  margin: 5em;
+}
+
+.morelikethis-title {
+  font-size: 1.5em;
+}
+
+.morelikethis-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.morelikethis-container img {
+  width: 24.5%;
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+
+/* ComingSoon Component */
+
+.comingsoon {
+  margin: 5em;
+}
+
+.comingsoon-title {
+  font-size: 1.5em;
+}
+
+.comingsoon-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.more-movies {
+  width: 23%;
+  margin-top: 1%;
+}
+
+.movie-description,
+.tudum-promote {
+  color: rgb(163, 163, 163);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+.movie-names {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+}
+
+.tudum-promote {
+  margin-top: 5em;
+  width: 25%;
+}
