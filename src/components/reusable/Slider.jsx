@@ -7,8 +7,6 @@ const Slider = ({ title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const onSliderClicked = (direction) => {
-    const slider = document.querySelector("#slider");
-
     if (direction === "left" && sliderIndex > 0) {
       setSliderIndex((prevIndex) => prevIndex - 1);
     } else if (direction === "right") {
@@ -28,7 +26,7 @@ const Slider = ({ title }) => {
         <div
           className="slider-action left flex"
           onClick={() => onSliderClicked("left")}></div>
-        <div className="slider-container flex" id="slider" style={sliderStyle}>
+        <div className="slider-container flex" style={sliderStyle}>
           <MovieCard />
           <MovieCard />
           <MovieCard />
