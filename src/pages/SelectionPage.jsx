@@ -1,5 +1,5 @@
 import "../styles/utilities.css";
-import "../styles/moviesPage.css";
+import "../styles/selectionpage.css";
 
 import React from "react";
 import Footer from "../components/reusable/Footer";
@@ -130,7 +130,6 @@ const SelectionPage = () => {
       .catch((err) => console.error("error:" + err));
   };
 
-
   useEffect(() => {
     getPopularMovies();
     getRomanticMovies();
@@ -155,20 +154,19 @@ const SelectionPage = () => {
           </div>
         </div>
 
-        <Slider arr={popularArray} title='Popular On Netflix'/>
-        <Slider arr={actionArray} title='Action Movies'/>
-        <Slider arr={romanticArray} title='Romantic Movies' />
-        <Slider arr={comedyArray} title='Comedy Movies'/>
-        <Slider arr={actionAndAdv} title='Action & Adventure Movies'/>
-        <Slider arr={familyArray} title='Family Movies'/>
-        <Slider arr={horrorArray} title='Horror Movies'/>
-        <Slider arr={hollywoodArray} title='Hollywood Movies'/>
-
+        <Slider arr={popularArray} title="Popular On Netflix" />
+        <Slider arr={actionArray} title="Action Movies" />
+        <Slider arr={romanticArray} title="Romantic Movies" />
+        <Slider arr={comedyArray} title="Comedy Movies" />
+        <Slider arr={actionAndAdv} title="Action & Adventure Movies" />
+        <Slider arr={familyArray} title="Family Movies" />
+        <Slider arr={horrorArray} title="Horror Movies" />
+        <Slider arr={hollywoodArray} title="Hollywood Movies" />
 
         <div className="blurred-sliders">
           <div className="blurred"></div>
-          <Slider arr={popularArray}/>
-          <Slider arr={popularArray}/>
+          <Slider arr={popularArray} />
+          <Slider arr={popularArray} />
         </div>
 
         <div className="bottom-container">

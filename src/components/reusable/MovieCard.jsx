@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   return (
-    <Link to="">
       <div className="movie-card flex-col">
         <img
           src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
@@ -13,7 +12,6 @@ const MovieCard = ({ movie }) => {
         />
         <p className="movie-title">{movie.original_title}</p>
       </div>
-    </Link>
   );
 };
 
