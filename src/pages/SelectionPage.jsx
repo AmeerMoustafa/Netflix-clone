@@ -34,99 +34,107 @@ const SelectionPage = () => {
   const getPopularMovies = async () => {
     try {
       const response = await fetch(popularMoviesLink, options);
-      const json = await response.json();
-      setPopularArray(json.results);
-      console.log(json.results);
+      const data = await response.json();
+      setPopularArray(data.results);
     } catch (err) {
-      console.error("error:" + err);
+      console.error(
+        "Error getting popular movies from API, check your connection and try again later"
+      );
     }
   };
 
-  const getActionMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=28`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setActionArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getActionMovies = async () => {
+    try {
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=28`;
+      const results = await fetch(getMovieByGenreURL, options);
+      const data = await results.json();
+      setActionArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting action movies from API, check your connection and try again later"
+      );
+    }
   };
 
-  const getRomanticMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10749`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setRomanticArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getRomanticMovies = async () => {
+    try {
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10749`;
+      const response = await fetch(getMovieByGenreURL, options);
+      const data = await response.json();
+      setRomanticArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting romantic movies from API, check your connection and try again later"
+      );
+    }
   };
 
-  const getComedyMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=35`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setComedyArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getComedyMovies = async () => {
+    try {
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=35`;
+      const response = await fetch(getMovieByGenreURL, options);
+      const data = await response.json();
+      setComedyArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting comedy movies from API, check your connection and try again later"
+      );
+    }
   };
 
-  const getHollywoodMovies = () => {
-    const getMoviByGenreURL =
-      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&region=US";
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setHollywoodArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getHollywoodMovies = async () => {
+    try {
+      const getMovieByGenreURL =
+        "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&region=US";
+      const response = await fetch(getMovieByGenreURL, options);
+      const data = await response.json();
+      setHollywoodArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting comedy movies from API, check your connection and try again later"
+      );
+    }
   };
 
-  const getActionAndAdventureMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=${[
-      12, 28,
-    ]}`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setActionAndAdv(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getActionAndAdventureMovies = async () => {
+    try {
+      const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=${[
+        12, 28,
+      ]}`;
+      const response = await fetch(getMoviByGenreURL, options);
+      const data = await response.json();
+      setActionAndAdv(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting action and adventure movies from API, check your connection and try again later"
+      );
+    }
   };
 
-  const getFamilyMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10751`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setFamilyArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getFamilyMovies = async () => {
+    try {
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10751`;
+      const response = await fetch(getMovieByGenreURL, options);
+      const data = await response.json();
+      setFamilyArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting family movies from API, please check your connection and try again later"
+      );
+    }
   };
 
-  const getHorrorMovies = () => {
-    const getMoviByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=27`;
-
-    fetch(getMoviByGenreURL, options)
-      .then((res) => res.json())
-      .then((json) => {
-        setHorrorArray(json.results);
-        console.log(json);
-      })
-      .catch((err) => console.error("error:" + err));
+  const getHorrorMovies = async () => {
+    try {
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=27`;
+      const response = await fetch(getMovieByGenreURL, options);
+      const data = await response.json();
+      setHorrorArray(data.results);
+    } catch (err) {
+      console.error(
+        "Error getting horror movies from API, please check your connection and try again later"
+      );
+    }
   };
 
   useEffect(() => {
@@ -183,7 +191,8 @@ const SelectionPage = () => {
           <a
             href="https://www.netflix.com/tudum"
             target="_blank"
-            className="read-more-link">
+            className="read-more-link"
+          >
             Read about Netflix TV shows and movies and watch bonus videos on
             Tudum.com.
           </a>
