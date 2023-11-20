@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LoginNav = () => {
   return (
     <nav className="flex navbar-parent">
@@ -9,7 +11,9 @@ const LoginNav = () => {
           <option>English</option>
           <option>العربية</option>
         </select>
-        <button>Sign in</button>
+        <Link to="/Movies">
+          <button>Sign in</button>
+        </Link>
       </div>
     </nav>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Signup = () => {
   return (
     <div className="flex-col hero-signup-container">
@@ -6,7 +8,9 @@ const Signup = () => {
       </span>
       <div className="flex hero-form-container">
         <input type="text" placeholder="Email address" />
-        <button>{"Get Started >"}</button>
+        <Link to="/Movies">
+          <button>{"Get Started >"}</button>
+        </Link>
       </div>
     </div>
   );
