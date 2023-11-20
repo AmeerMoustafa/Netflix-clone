@@ -1,0 +1,223 @@
+/* MovieDescription Component */
+
+.moviepage {
+  overflow-x: hidden;
+  background-color: #181818;
+  color: white;
+}
+
+.moviedescription {
+  height: 100%;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("../assets/moviepage/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-container {
+  justify-content: center;
+  height: 100%;
+  padding: 0 15% 0 5%;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    #181818 10%,
+    hsla(0, 0%, 9%, 0.98) 20%,
+    hsla(0, 0%, 9%, 0.97) 25%,
+    hsla(0, 0%, 9%, 0.95) 35%,
+    hsla(0, 0%, 9%, 0.94) 40%,
+    hsla(0, 0%, 9%, 0.92) 45%,
+    hsla(0, 0%, 9%, 0.9) 50%,
+    hsla(0, 0%, 9%, 0.87) 55%,
+    hsla(0, 0%, 9%, 0.82) 60%,
+    hsla(0, 0%, 9%, 0.75) 65%,
+    hsla(0, 0%, 9%, 0.63) 70%,
+    hsla(0, 0%, 9%, 0.45) 75%,
+    hsla(0, 0%, 9%, 0.27) 80%,
+    hsla(0, 0%, 9%, 0.15) 85%,
+    hsla(0, 0%, 9%, 0.08) 90%,
+    hsla(0, 0%, 9%, 0.03) 95%,
+    hsla(0, 0%, 9%, 0)
+  );
+}
+
+.hero-title {
+  margin-top: 6%;
+}
+
+.hero-info {
+  margin-top: 4%;
+}
+
+.hero-maturity {
+  border: 1px solid #a3a3a3;
+  margin: 0 0.3em;
+  padding: 0 0.2em;
+}
+
+.hero-description {
+  margin: 4% 0;
+  line-height: 1.4;
+}
+
+.grey {
+  color: #a3a3a3;
+}
+
+.hero-nav {
+  width: 90%;
+  height: 8vh;
+  background-image: linear-gradient(90deg, #2b2929 5%, #181818 95%);
+  box-shadow: 8px 5px 16px 0 rgba(0, 0, 0, 0.37);
+  margin: auto;
+  justify-content: space-between;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.hero-nav-left {
+  align-items: center;
+}
+
+.hero-nav-left img {
+  height: 2.5em;
+  object-fit: contain;
+  width: 1.3em;
+  margin: 1.5em;
+}
+
+.join-btn {
+  background-color: var(--main-red);
+  border-radius: 2px;
+  font-weight: 400;
+  text-align: center;
+  min-width: 7rem;
+  height: 2rem;
+  margin-right: 2em;
+}
+
+/* MoreDetails Component */
+
+.moredetails {
+  margin: 5em;
+}
+
+.moredetails .hr {
+  background: linear-gradient(90deg, #777 0, rgba(51, 51, 51, 0.5) 50%, #777);
+  height: 1px;
+  margin: 2em 0;
+}
+
+.small-description p {
+  text-align: center;
+  color: #a3a3a3;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+
+.details-title {
+  font-size: 1.5em;
+}
+
+/* MoreLikeThis Component */
+
+.morelikethis {
+  margin: 5em;
+}
+
+.morelikethis-title {
+  font-size: 1.5em;
+}
+
+.morelikethis-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.morelikethis-container img {
+  width: 24.5%;
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+
+/* ComingSoon Component */
+
+.comingsoon {
+  margin: 5em;
+}
+
+.comingsoon-title {
+  font-size: 1.5em;
+}
+
+.comingsoon-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.more-movies {
+  width: 23%;
+  margin-top: 1%;
+}
+
+.movie-description,
+.tudum-promote {
+  color: rgb(163, 163, 163);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+.movie-names {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+}
+
+.tudum-promote {
+  margin-top: 5em;
+  width: 25%;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-container {
+    width: 100%;
+  }
+  .hero-description,
+  .hero-starring {
+    font-size: 0.5em;
+  }
+  .hero-nav-left span {
+    font-size: 0.7em;
+  }
+  .comingsoon {
+    margin: 1em;
+  }
+  .morelikethis {
+    margin: 1em;
+  }
+  .more-movies {
+    flex-basis: 50%;
+    margin: 5% 0;
+  }
+  .morelikethis-container img {
+    flex-basis: 48%;
+  }
+  .tudum-promote {
+    width: 50%;
+  }
+}
