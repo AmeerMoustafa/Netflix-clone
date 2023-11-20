@@ -1,7 +1,6 @@
 import "../styles/utilities.css";
 import "../styles/selectionpage.css";
 
-import React from "react";
 import Footer from "../components/reusable/Footer";
 import Navbar from "../components/reusable/Navbar";
 import Slider from "../components/reusable/Slider";
