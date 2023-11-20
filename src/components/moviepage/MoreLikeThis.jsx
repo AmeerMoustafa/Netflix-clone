@@ -2,6 +2,7 @@ import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
 
 const MoreLikeThis = () => {
+  // dummy images
   let arr = [
     `src/assets/moviepage/movie.jpg`,
     `src/assets/moviepage/movie.jpg`,
