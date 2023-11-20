@@ -3,7 +3,13 @@ import SelectionPage from "./pages/SelectionPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  return <Loginpage />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Loginpage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
