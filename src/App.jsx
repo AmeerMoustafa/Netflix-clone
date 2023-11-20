@@ -7,6 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Loginpage />} />
+        <Route path="/Movies" element={<SelectionPage />} />
       </Routes>
     </Router>
   );
