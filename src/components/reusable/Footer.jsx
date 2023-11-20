@@ -1,4 +1,4 @@
-import "../../styles/utilities.css"
+import "../../styles/utilities.css";
 import "../../styles/reusablecomponents/footer.css";
 
 const Footer = () => {
@@ -61,6 +61,13 @@ const Footer = () => {
             <a href="#">Contact Us</a>
           </li>
         </ul>
+      </div>
+      <div className="language-picker flex">
+        <select>
+          <p>asdnad</p>
+          <option>English</option>
+          <option>العربية</option>
+        </select>
       </div>
     </footer>
   );

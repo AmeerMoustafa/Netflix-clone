@@ -28,6 +28,21 @@
   text-decoration: underline;
 }
 
+.language-picker {
+  border: 2px solid rgb(207, 207, 207);
+  background-color: black;
+  width: 6rem;
+  height: 2rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.language-picker > select {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
 /* Media Queries */
 
 /* Tablet */
