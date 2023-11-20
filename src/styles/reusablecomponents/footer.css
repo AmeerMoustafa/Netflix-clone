@@ -29,7 +29,7 @@
 }
 
 .language-picker {
-  border: 2px solid rgb(207, 207, 207);
+  border: 2px solid var(--footer-link);
   background-color: black;
   width: 6rem;
   height: 2rem;
@@ -41,7 +41,7 @@
 .language-picker > select {
   width: 100%;
   background-color: black;
-  color: white;
+  color: var(--footer-link);
 }
 /* Media Queries */
 
