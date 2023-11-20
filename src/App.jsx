@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Loginpage />} />
         <Route path="/Movies" element={<SelectionPage />} />
+        <Route path="/movie/:movieID" element={<Moviepage />} />
       </Routes>
     </Router>
   );
