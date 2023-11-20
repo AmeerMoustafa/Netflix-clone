@@ -23,3 +23,32 @@
   font-size: 0.9rem;
   text-decoration: none;
 }
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.language-picker {
+  border: 2px solid var(--footer-link);
+  background-color: black;
+  width: 6rem;
+  height: 2rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.language-picker > select {
+  width: 100%;
+  background-color: black;
+  color: var(--footer-link);
+}
+/* Media Queries */
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 100%;
+  }
+}

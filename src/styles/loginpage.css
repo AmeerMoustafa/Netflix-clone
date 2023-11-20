@@ -1,6 +1,6 @@
 .hero-parent {
   width: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 11rem;
   font-family: "Poppins", sans-serif;
   align-items: center;
   background-image: linear-gradient(
@@ -13,7 +13,6 @@
   background-size: cover;
 
   gap: 12rem;
-  height: 70vh;
 }
 
 .navbar-parent {
@@ -24,19 +23,21 @@
 }
 
 .navbar-logo-container {
-  width: 15%;
+  width: 13%;
 }
 
 .navbar-signin-container {
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .navbar-signin-container select {
   cursor: pointer;
+  border: 1px solid var(--grey);
   color: white;
   background-color: transparent;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
 }
 
 .navbar-signin-container button {
@@ -48,28 +49,35 @@
 }
 
 .hero-content-container {
+  width: 45%;
   gap: 1rem;
   color: var(--text-color);
   text-align: center;
 }
 
 .hero-content-container h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 900;
 }
 
 .hero-content-container > span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
 .hero-signup-container {
+  margin-top: 1rem;
   gap: 1rem;
 }
 
 .hero-signup-container span {
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.hero-signup-container span {
+  font-size: 1.1rem;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -85,7 +93,12 @@
   padding: 1rem;
   border: 2px solid var(--grey);
   border-radius: 5px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-form-container input[type="text"]::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .hero-form-container button {
@@ -96,4 +109,259 @@
   font-size: 1.5rem;
   font-weight: 500;
   border-radius: 5px;
+}
+
+/* Feature style */
+
+.parent-container {
+  border-top: 10px solid var(--grey);
+  font-family: "Poppins", sans-serif;
+  padding: 4rem;
+  background-color: var(--background);
+  align-items: center;
+  justify-content: center;
+}
+
+.child-container {
+  gap: 1rem;
+  width: 65%;
+}
+
+.feature-content-container {
+  gap: 0.9rem;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.feature-content-container > h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.feature-content-container > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* TV section styles */
+
+.tv-image-container {
+  width: 70%;
+  z-index: 1;
+  position: relative;
+}
+
+.tv-image {
+  z-index: 2;
+  width: 100%;
+}
+
+.tv-video {
+  width: 80%;
+  height: 55%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 20%;
+  left: 13%;
+}
+
+/* Download section styles */
+
+.downloads-content-container h2 {
+  line-height: 1.2;
+}
+
+.download-image-container {
+  width: 70%;
+  position: relative;
+}
+
+.download-overlay-content {
+  margin-right: 3rem;
+}
+
+.download-overlay-container {
+  padding: 1rem;
+  border: 3px solid var(--grey);
+  background-color: var(--background);
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  gap: 0.5rem;
+  width: 55%;
+  top: 69%;
+  left: 22%;
+  position: absolute;
+}
+
+.download-overlay-container img {
+  width: 15%;
+}
+
+.overlay-title {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.overlay-subtitle {
+  font-size: 0.8rem;
+  color: #0071eb;
+}
+
+/* Watch everywhere styles */
+
+.watch-image-container {
+  width: 70%;
+  z-index: 1;
+  position: relative;
+}
+
+.watch-video {
+  width: 63%;
+  z-index: -1;
+  position: absolute;
+  left: 19%;
+  top: 10%;
+}
+
+/* kids section styles */
+
+.kids-section-child {
+  width: 70%;
+}
+
+/* FAQ section */
+
+.faq-child-container {
+  gap: 1rem;
+}
+
+.faq-child-container > h2 {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+/* Accordian component styling */
+
+.accordion-parent {
+  gap: 0.5rem;
+}
+
+.faq-title {
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-title > h2 {
+  font-weight: 400;
+}
+
+.accordion-item {
+  cursor: pointer;
+  color: white;
+  background-color: #2d2d2d;
+  padding: 1rem 2rem;
+}
+
+.accordion-item:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+.item-toggle {
+  font-size: 2rem;
+}
+
+.faq-content-container {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-content {
+  padding: 1rem;
+}
+
+.accordion-active {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+/* Media Queries */
+
+/* Laptops */
+
+@media screen and (max-width: 1440px) {
+  .navbar-parent {
+    width: 85%;
+  }
+
+  .hero-content-container {
+    width: 80%;
+  }
+
+  .child-container {
+    width: 80%;
+  }
+}
+
+/* Tablets */
+
+@media screen and (max-width: 768px) {
+  .navbar-parent {
+    width: 95%;
+  }
+
+  .hero-content-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content-container span {
+    font-size: 1rem;
+  }
+
+  .hero-form-container {
+    justify-content: center;
+  }
+
+  .hero-form-container input[type="text"] {
+    width: 54%;
+  }
+
+  .hero-signup-container span {
+    font-size: 1rem;
+  }
+
+  .child-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-content-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-content-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .feature-content-container p {
+    font-size: 1rem;
+  }
+
+  .downloads-child-container,
+  .kids-section-child {
+    flex-direction: column-reverse;
+  }
 }
