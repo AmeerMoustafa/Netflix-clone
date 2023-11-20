@@ -4,6 +4,7 @@ import "../styles/moviesPage.css";
 import React from "react";
 import Footer from "../components/reusable/Footer";
 import Navbar from "../components/reusable/Navbar";
+import Slider from "../components/reusable/Slider";
 import { useEffect, useState } from "react";
 
 const apiKey =
@@ -129,6 +130,7 @@ const SelectionPage = () => {
       .catch((err) => console.error("error:" + err));
   };
 
+
   useEffect(() => {
     getPopularMovies();
     getRomanticMovies();
@@ -153,26 +155,20 @@ const SelectionPage = () => {
           </div>
         </div>
 
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
-        <div className="slider"></div>
+        <Slider arr={popularArray} title='Popular On Netflix'/>
+        <Slider arr={actionArray} title='Action Movies'/>
+        <Slider arr={romanticArray} title='Romantic Movies' />
+        <Slider arr={comedyArray} title='Comedy Movies'/>
+        <Slider arr={actionAndAdv} title='Action & Adventure Movies'/>
+        <Slider arr={familyArray} title='Family Movies'/>
+        <Slider arr={horrorArray} title='Horror Movies'/>
+        <Slider arr={hollywoodArray} title='Hollywood Movies'/>
 
 
         <div className="blurred-sliders">
           <div className="blurred"></div>
-          <div className="slider">s</div>
-          <div className="slider">s</div>
+          <Slider arr={popularArray}/>
+          <Slider arr={popularArray}/>
         </div>
 
         <div className="bottom-container">
