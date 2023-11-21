@@ -1,11 +1,11 @@
 .slider-title {
-  /* padding-left: 4rem; */
   padding-top: 4rem;
   padding-bottom: 2rem;
   color: var(--text-color);
 }
 
 .movies-slider-container {
+  overflow-x: hidden;
   position: relative;
   align-items: center;
   width: 100%;
