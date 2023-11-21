@@ -7,10 +7,18 @@ const Slider = ({ arr, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const onSliderClicked = (direction) => {
+    const totalMoviesShown = arr.length / 5;
+
     if (direction === "left" && sliderIndex > 0) {
-      setSliderIndex((prevIndex) => prevIndex - 1);
-    } else if (direction === "right") {
-      setSliderIndex((prevIndex) => prevIndex + 1);
+      setSliderIndex((prevIndex) => {
+        const newIndex = prevIndex - 1;
+        return newIndex;
+      });
+    } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
+      setSliderIndex((prevIndex) => {
+        const newIndex = prevIndex + 1;
+        return newIndex;
+      });
     }
   };
 
@@ -26,17 +34,17 @@ const Slider = ({ arr, title }) => {
         <div
           className="slider-action left flex"
           onClick={() => onSliderClicked("left")}>
-          <img src="./src/arrow-left.svg" />
+          <img src="./src/arrow-left.svg" alt="Left Arrow" />
         </div>
         <div className="slider-container flex" style={sliderStyle}>
-          {arr.map((movie) => (
-            <MovieCard movie={movie} />
+          {arr.map((movie, index) => (
+            <MovieCard key={index} movie={movie} />
           ))}
         </div>
         <div
           className="slider-action right flex"
           onClick={() => onSliderClicked("right")}>
-          <img src="./src/arrow-right.svg" />
+          <img src="./src/arrow-right.svg" alt="Right Arrow" />
         </div>
       </div>
     </div>
