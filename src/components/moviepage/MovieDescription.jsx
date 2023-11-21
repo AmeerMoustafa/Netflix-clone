@@ -27,9 +27,7 @@ const MovieDescription = ({ movie, casts }) => {
             <p className="hero-starring">
               <span className="grey">Starring: </span>
               {casts.map((cast) =>
-                cast.popularity > 60 && cast.known_for_department == "Acting"
-                  ? `${cast.name} , `
-                  : ""
+                cast.known_for_department == "Acting" ? `${cast.name} , ` : ""
               )}
             </p>
           </div>

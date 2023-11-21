@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 function Moviepage() {
   const { movieID } = useParams();
   const [movie, setMovie] = useState({});
-  const [casts , setCasts] = useState([])
+  const [casts, setCasts] = useState([]);
 
   const fetchData = async () => {
     const apiKey =
@@ -38,8 +38,8 @@ function Moviepage() {
 
     const response = await fetch(url, options);
     const data = await response.json();
-    setCasts(data.cast);
-    console.log(data.cast);
+    const sliced_array = data.cast.slice(0, 4);
+    setCasts(sliced_array);
   };
 
   useEffect(() => {
