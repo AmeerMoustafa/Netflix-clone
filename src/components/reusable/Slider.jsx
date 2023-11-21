@@ -10,15 +10,9 @@ const Slider = ({ arr, title }) => {
     const totalMoviesShown = arr.length / 5;
 
     if (direction === "left" && sliderIndex > 0) {
-      setSliderIndex((prevIndex) => {
-        const newIndex = prevIndex - 1;
-        return newIndex;
-      });
+      setSliderIndex((prevIndex) => prevIndex - 1);
     } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
-      setSliderIndex((prevIndex) => {
-        const newIndex = prevIndex + 1;
-        return newIndex;
-      });
+      setSliderIndex((prevIndex) => prevIndex + 1);
     }
   };
 
