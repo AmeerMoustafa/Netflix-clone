@@ -3,11 +3,11 @@ import "../../styles/reusablecomponents/slider.css";
 import "../../styles/utilities.css";
 import MovieCard from "./MovieCard";
 
-const Slider = ({ arr, title }) => {
+const Slider = ({ movie_array, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const onSliderClicked = (direction) => {
-    const totalMoviesShown = arr.length / 5;
+    const totalMoviesShown = movie_array.length / 5;
 
     if (direction === "left" && sliderIndex > 0) {
       setSliderIndex((prevIndex) => prevIndex - 1);
@@ -35,7 +35,7 @@ const Slider = ({ arr, title }) => {
           />
         </div>
         <div className="slider-container flex" style={sliderStyle}>
-          {arr.map((movie, index) => (
+          {movie_array.map((movie, index) => (
             <MovieCard key={index} movie={movie} />
           ))}
         </div>
