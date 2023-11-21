@@ -5,13 +5,16 @@ import MovieCard from "./MovieCard";
 
 const Slider = ({ movie_array, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
+  const sliderItemWidth = 20;
 
   const onSliderClicked = (direction) => {
-    const totalMoviesShown = movie_array.length / 5;
-
+    const totalMoviesShown = Math.ceil(100 / sliderItemWidth);
     if (direction === "left" && sliderIndex > 0) {
       setSliderIndex((prevIndex) => prevIndex - 1);
-    } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
+    } else if (
+      direction === "right" &&
+      sliderIndex < movie_array.length / totalMoviesShown - 1
+    ) {
       setSliderIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -27,8 +30,7 @@ const Slider = ({ movie_array, title }) => {
       <div className="movies-slider-container flex">
         <div
           className="slider-action left flex"
-          onClick={() => onSliderClicked("left")}
-        >
+          onClick={() => onSliderClicked("left")}>
           <img
             src="./src/assets/selectionpage/arrow-left.svg"
             alt="Left Arrow"
@@ -41,8 +43,7 @@ const Slider = ({ movie_array, title }) => {
         </div>
         <div
           className="slider-action right flex"
-          onClick={() => onSliderClicked("right")}
-        >
+          onClick={() => onSliderClicked("right")}>
           <img
             src="./src/assets/selectionpage/arrow-right.svg"
             alt="Right Arrow"
