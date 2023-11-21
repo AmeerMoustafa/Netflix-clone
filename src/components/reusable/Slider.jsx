@@ -16,7 +16,7 @@ const Slider = ({ arr, title }) => {
 
   const sliderStyle = {
     transform: `translateX(calc(${sliderIndex * -100}%))`,
-    transition: "transform 250ms ease-in-out",
+    transition: "transform 0.4s ease-in-out",
   };
 
   return (
@@ -25,8 +25,9 @@ const Slider = ({ arr, title }) => {
       <div className="movies-slider-container flex">
         <div
           className="slider-action left flex"
-          onClick={() => onSliderClicked("left")}
-        ></div>
+          onClick={() => onSliderClicked("left")}>
+          <img src="./src/arrow-left.svg" />
+        </div>
         <div className="slider-container flex" style={sliderStyle}>
           {arr.map((movie) => (
             <MovieCard movie={movie} />
@@ -34,8 +35,9 @@ const Slider = ({ arr, title }) => {
         </div>
         <div
           className="slider-action right flex"
-          onClick={() => onSliderClicked("right")}
-        ></div>
+          onClick={() => onSliderClicked("right")}>
+          <img src="./src/arrow-right.svg" />
+        </div>
       </div>
     </div>
   );
