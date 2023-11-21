@@ -142,12 +142,13 @@
 .morelikethis-container {
   width: 100%;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .morelikethis-container img {
-  width: 24.5%;
-  margin-top: 1%;
+  width: 20.5%;
   box-sizing: border-box;
   cursor: pointer;
 }
