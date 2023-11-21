@@ -1,6 +1,6 @@
 import "../styles/utilities.css";
 import "../styles/moviepage.css";
-
+import Navbar from "../components/reusable/Navbar";
 import MovieDescription from "../components/moviepage/MovieDescription";
 import MoreDetails from "../components/moviepage/MoreDetails";
 import MoreLikeThis from "../components/moviepage/MoreLikeThis";
@@ -61,11 +61,12 @@ function Moviepage() {
     fetchData();
     getCredits();
     getRecommendations();
-    getUpcomingMovies()
+    getUpcomingMovies();
   }, []);
 
   return (
     <div className="moviepage">
+      <Navbar />
       <MovieDescription movie={movie} casts={casts}></MovieDescription>
       <MoreDetails></MoreDetails>
       <MoreLikeThis recomArray={recomArray}></MoreLikeThis>
