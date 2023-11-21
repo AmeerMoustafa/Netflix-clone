@@ -1,16 +1,20 @@
 import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
-import { getMovieDuration } from "../../utilities";
+import { getMovieDuration } from "../../core/utilities";
 
 const MovieDescription = ({ movie, casts }) => {
   const changeBackground = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
+    backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
   };
   return (
     <div className="moviedescription">
       <div className="hero flex" style={changeBackground}>
         <div className="hero-container flex-col">
           <div className="hero-details">
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt="Movie Logo"
+            />
             <h2 className="hero-title">{movie.original_title}</h2>
             <p className="hero-info grey">
               {movie.release_date} |{" "}
@@ -23,7 +27,7 @@ const MovieDescription = ({ movie, casts }) => {
             <p className="hero-starring">
               <span className="grey">Starring: </span>
               {casts.map((cast) =>
-                cast.popularity > 75 && cast.known_for_department == "Acting"
+                cast.popularity > 60 && cast.known_for_department == "Acting"
                   ? `${cast.name} , `
                   : ""
               )}

@@ -54,6 +54,10 @@
   margin-top: 4%;
 }
 
+.hero-details img {
+  width: 50%;
+}
+
 .hero-maturity {
   border: 1px solid #a3a3a3;
   margin: 0 0.3em;
