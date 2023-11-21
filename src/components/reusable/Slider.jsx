@@ -27,8 +27,12 @@ const Slider = ({ arr, title }) => {
       <div className="movies-slider-container flex">
         <div
           className="slider-action left flex"
-          onClick={() => onSliderClicked("left")}>
-          <img src="./src/arrow-left.svg" alt="Left Arrow" />
+          onClick={() => onSliderClicked("left")}
+        >
+          <img
+            src="./src/assets/selectionpage/arrow-left.svg"
+            alt="Left Arrow"
+          />
         </div>
         <div className="slider-container flex" style={sliderStyle}>
           {arr.map((movie, index) => (
@@ -37,8 +41,12 @@ const Slider = ({ arr, title }) => {
         </div>
         <div
           className="slider-action right flex"
-          onClick={() => onSliderClicked("right")}>
-          <img src="./src/arrow-right.svg" alt="Right Arrow" />
+          onClick={() => onSliderClicked("right")}
+        >
+          <img
+            src="./src/assets/selectionpage/arrow-right.svg"
+            alt="Right Arrow"
+          />
         </div>
       </div>
     </div>
