@@ -62,7 +62,7 @@ function Moviepage() {
     getCredits();
     getRecommendations();
     getUpcomingMovies();
-  }, []);
+  }, [movieID]);
 
   return (
     <div className="moviepage">
