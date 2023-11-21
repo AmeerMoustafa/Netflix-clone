@@ -6,11 +6,12 @@ import MoreDetails from "../components/moviepage/MoreDetails";
 import MoreLikeThis from "../components/moviepage/MoreLikeThis";
 import ComingSoon from "../components/moviepage/ComingSoon";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams , useNavigate} from "react-router-dom";
 import Footer from "../components/reusable/Footer";
 
 function Moviepage() {
-  const { movieID } = useParams();
+  let { movieID } = useParams();
+  const navigate = useNavigate()
   const [movie, setMovie] = useState({});
   const [casts, setCasts] = useState([]);
   const [recomArray, setRecomArray] = useState([]);
@@ -55,6 +56,10 @@ function Moviepage() {
     setUpcomingArray(sliced_array);
   };
 
+  const handleClick = (id) => {
+    navigate(`/movie/${id}`);
+  }
+
   useEffect(() => {
     fetchData();
     getCredits();
@@ -67,8 +72,8 @@ function Moviepage() {
       <Navbar />
       <MovieDescription movie={movie} casts={casts}></MovieDescription>
       <MoreDetails></MoreDetails>
-      <MoreLikeThis recomArray={recomArray}></MoreLikeThis>
-      <ComingSoon upcomingArray={upcomingArray}></ComingSoon>
+      <MoreLikeThis recomArray={recomArray} handleClick={handleClick}></MoreLikeThis>
+      <ComingSoon upcomingArray={upcomingArray} handleClick={handleClick}></ComingSoon>
       <Footer />
     </div>
   );

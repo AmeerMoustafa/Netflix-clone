@@ -168,8 +168,9 @@
 }
 
 .more-movies {
-  width: 23%;
   margin-top: 1%;
+  flex: 1 0 30%;
+  margin: 10px;
 }
 
 .movie-description,
@@ -182,20 +183,14 @@
 
 .movie-names {
   color: rgb(255, 255, 255);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 600;
   line-height: 1.375;
 }
 
 .tudum-promote {
   margin-top: 5em;
   width: 25%;
-}
-
-a:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 /* Responsive */
