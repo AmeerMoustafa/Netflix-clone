@@ -6,12 +6,12 @@ import MoreDetails from "../components/moviepage/MoreDetails";
 import MoreLikeThis from "../components/moviepage/MoreLikeThis";
 import ComingSoon from "../components/moviepage/ComingSoon";
 import { useEffect, useState } from "react";
-import { Link, useParams , useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/reusable/Footer";
 
 function Moviepage() {
   let { movieID } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [movie, setMovie] = useState({});
   const [casts, setCasts] = useState([]);
   const [recomArray, setRecomArray] = useState([]);
@@ -37,6 +37,7 @@ function Moviepage() {
     const response = await fetch(url, options);
     const data = await response.json();
     const sliced_array = data.results.slice(0, 12);
+    console.log(sliced_array);
     setRecomArray(sliced_array);
   };
 
@@ -58,22 +59,28 @@ function Moviepage() {
 
   const handleClick = (id) => {
     navigate(`/movie/${id}`);
-  }
+  };
 
   useEffect(() => {
     fetchData();
     getCredits();
     getRecommendations();
-    getUpcomingMovies()
+    getUpcomingMovies();
   }, [movieID]);
 
   return (
     <div className="moviepage">
       <Navbar />
       <MovieDescription movie={movie} casts={casts}></MovieDescription>
-      <MoreDetails></MoreDetails>
-      <MoreLikeThis recomArray={recomArray} handleClick={handleClick}></MoreLikeThis>
-      <ComingSoon upcomingArray={upcomingArray} handleClick={handleClick}></ComingSoon>
+      <MoreDetails movie={movie} />
+      <MoreLikeThis
+        recomArray={recomArray}
+        handleClick={handleClick}
+      ></MoreLikeThis>
+      <ComingSoon
+        upcomingArray={upcomingArray}
+        handleClick={handleClick}
+      ></ComingSoon>
       <Footer />
     </div>
   );

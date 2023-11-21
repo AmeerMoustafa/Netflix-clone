@@ -1,16 +1,12 @@
 import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
 
-const MoreDetails = () => {
+const MoreDetails = ({ movie }) => {
   return (
     <div className="moredetails">
       <div className="small-description">
         <div className="hr"></div>
-        <p>
-          Al Pacino stars in this crime epic from director Brian De Palma and
-          <br />
-          screenwriter Oliver Stone.
-        </p>
+        <p>{movie.tagline}</p>
         <div className="hr"></div>
       </div>
       <div className="details-title">
