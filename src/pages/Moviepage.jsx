@@ -37,7 +37,6 @@ function Moviepage() {
     const data = await response.json();
     const sliced_array = data.results.slice(0, 12);
     setRecomArray(sliced_array);
-    console.log(sliced_array);
   };
 
   const getCredits = async () => {
@@ -54,7 +53,6 @@ function Moviepage() {
     const data = await response.json();
     const sliced_array = data.results.slice(0, 9);
     setUpcomingArray(sliced_array);
-    console.log(sliced_array);
   };
 
   useEffect(() => {
