@@ -149,6 +149,7 @@
   width: 24.5%;
   margin-top: 1%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 /* ComingSoon Component */
