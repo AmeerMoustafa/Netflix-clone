@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/reusablecomponents/slider.css";
 import "../../styles/utilities.css";
 import MovieCard from "./MovieCard";

@@ -64,7 +64,6 @@ const Footer = () => {
       </div>
       <div className="language-picker flex">
         <select>
-          <p>asdnad</p>
           <option>English</option>
           <option>العربية</option>
         </select>

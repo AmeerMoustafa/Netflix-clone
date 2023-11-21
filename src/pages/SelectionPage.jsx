@@ -137,15 +137,19 @@ const SelectionPage = () => {
     }
   };
 
+  const callAPI = async () => {
+   await getPopularMovies();
+   await getRomanticMovies();
+   await getComedyMovies();
+   await getActionMovies();
+   await getHollywoodMovies();
+   await getActionAndAdventureMovies();
+   await getFamilyMovies();
+   await getHorrorMovies();
+  };
+
   useEffect(() => {
-    getPopularMovies();
-    getRomanticMovies();
-    getComedyMovies();
-    getActionMovies();
-    getHollywoodMovies();
-    getActionAndAdventureMovies();
-    getFamilyMovies();
-    getHorrorMovies();
+    callAPI()
   }, []);
 
   return (
@@ -161,19 +165,19 @@ const SelectionPage = () => {
           </div>
         </div>
 
-        <Slider arr={popularArray} title="Popular On Netflix" />
-        <Slider arr={actionArray} title="Action Movies" />
-        <Slider arr={romanticArray} title="Romantic Movies" />
-        <Slider arr={comedyArray} title="Comedy Movies" />
-        <Slider arr={actionAndAdv} title="Action & Adventure Movies" />
-        <Slider arr={familyArray} title="Family Movies" />
-        <Slider arr={horrorArray} title="Horror Movies" />
-        <Slider arr={hollywoodArray} title="Hollywood Movies" />
+        <Slider movie_array={popularArray} title="Popular On Netflix" />
+        <Slider movie_array={actionArray} title="Action Movies" />
+        <Slider movie_array={romanticArray} title="Romantic Movies" />
+        <Slider movie_array={comedyArray} title="Comedy Movies" />
+        <Slider movie_array={actionAndAdv} title="Action & Adventure Movies" />
+        <Slider movie_array={familyArray} title="Family Movies" />
+        <Slider movie_array={horrorArray} title="Horror Movies" />
+        <Slider movie_array={hollywoodArray} title="Hollywood Movies" />
 
         <div className="blurred-sliders">
           <div className="blurred"></div>
-          <Slider arr={popularArray} />
-          <Slider arr={popularArray} />
+          <Slider movie_array={popularArray} />
+          <Slider movie_array={popularArray} />
         </div>
 
         <div className="bottom-container">
@@ -191,7 +195,8 @@ const SelectionPage = () => {
           <a
             href="https://www.netflix.com/tudum"
             target="_blank"
-            className="read-more-link">
+            className="read-more-link"
+          >
             Read about Netflix TV shows and movies and watch bonus videos on
             Tudum.com.
           </a>
