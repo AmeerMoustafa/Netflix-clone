@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 function Moviepage() {
   const { movieID } = useParams();
   const [movie, setMovie] = useState({});
+  const [casts , setCasts] = useState([])
 
   const fetchData = async () => {
     const apiKey =
@@ -23,15 +24,32 @@ function Moviepage() {
     const response = await fetch(url, options);
     const data = await response.json();
     setMovie(data);
+    console.log(data);
+  };
+
+  const getCredits = async () => {
+    const apiKey =
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZTFjZGY1YmYzNTdjMTJjMzNmMGRkNTc1MDU4YTI1YyIsInN1YiI6IjY1NThmM2U4YjU0MDAyMTRjZjM5ZjEzYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GRAJBNXxK0rODxMyrd9a7IxiyJonE0jpKGUPC6MbrSw";
+    const url = `https://api.themoviedb.org/3/movie/${movieID}/credits`;
+    const options = {
+      method: "GET",
+      headers: { accept: "application/json", Authorization: apiKey },
+    };
+
+    const response = await fetch(url, options);
+    const data = await response.json();
+    setCasts(data.cast);
+    console.log(data.cast);
   };
 
   useEffect(() => {
     fetchData();
+    getCredits();
   }, []);
 
   return (
     <div className="moviepage">
-      <MovieDescription movie={movie}></MovieDescription>
+      <MovieDescription movie={movie} casts={casts}></MovieDescription>
       <MoreDetails></MoreDetails>
       <MoreLikeThis></MoreLikeThis>
       <ComingSoon></ComingSoon>

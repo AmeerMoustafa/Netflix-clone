@@ -1,7 +1,8 @@
 import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
+import { getMovieDuration } from "../../utilities";
 
-const MovieDescription = ({ movie }) => {
+const MovieDescription = ({ movie, casts }) => {
   const changeBackground = {
     backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
   };
@@ -10,19 +11,22 @@ const MovieDescription = ({ movie }) => {
       <div className="hero flex" style={changeBackground}>
         <div className="hero-container flex-col">
           <div className="hero-details">
-            <img
-              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-              alt="Movie Logo"
-            />
             <h2 className="hero-title">{movie.original_title}</h2>
             <p className="hero-info grey">
-              1983 | <span className="hero-maturity">18+</span> | 2h 49m |
-              Thrillers
+              {movie.release_date} |{" "}
+              {movie.adult ? '<span className="hero-maturity"></span> |' : ""}{" "}
+              {getMovieDuration(movie.runtime)} | Thrillers
             </p>
             <p className="hero-description">{movie.overview}</p>
+
+            {/* Get Popular Actors */}
             <p className="hero-starring">
-              <span className="grey">Starring: </span> Al Pacino, Steven Bauer,
-              Michelle Pfeiffer
+              <span className="grey">Starring: </span>
+              {casts.map((cast) =>
+                cast.popularity > 75 && cast.known_for_department == "Acting"
+                  ? `${cast.name} , `
+                  : ""
+              )}
             </p>
           </div>
         </div>
@@ -30,7 +34,7 @@ const MovieDescription = ({ movie }) => {
       <div className="hero-nav flex">
         <div className="hero-nav-left flex">
           <img
-            src="src\assets\moviepage\netflix-logo.png"
+            src="../../../../netflix-logo.png"
             alt="Netflix logo"
             className="img"
           />
