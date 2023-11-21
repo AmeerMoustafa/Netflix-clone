@@ -9,6 +9,11 @@ const getMovieDuration = (duration) => {
   return formattedResult;
 };
 
+const refreshPage = () => {
+  window.location.reload();
+}
+
 export {
     getMovieDuration,
+    refreshPage
 }

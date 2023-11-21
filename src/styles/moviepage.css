@@ -192,6 +192,12 @@
   width: 25%;
 }
 
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {

@@ -1,28 +1,22 @@
 import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
+import { Link } from "react-router-dom";
+import {refreshPage} from "../../core/utilities"
 
-const ComingSoon = () => {
-  let arr = [
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-    `Avatar The Last Airbender Water. Earth. Fire. Air. Long ago, the four nations lived together in harmony — then everything changed. A live-action adaptation of Aang's story.`,
-  ];
-
+const ComingSoon = ({ upcomingArray }) => {
   return (
     <div className="comingsoon">
       <div className="comingsoon-title">
-        <h2>Come Soon</h2>
+        <h2>Coming Soon</h2>
         <div className="comingsoon-container flex">
-          {arr.map((text) => (
-            <div className="more-movies">
-              <p className="movie-names">Title</p>
-              <p className="movie-description">{text}</p>
-            </div>
+          {/* Upcoming Movies */}
+          {upcomingArray.map((movie) => (
+            <Link to={`/movie/${movie.id}`} className="link">
+              <div className="more-movies">
+                <p className="movie-names">{movie.original_title}</p>
+                <p className="movie-description">{movie.overview}</p>
+              </div>
+            </Link>
           ))}
           <p className="tudum-promote">
             Go behind the scenes of Netflix TV shows and movies, see what's
