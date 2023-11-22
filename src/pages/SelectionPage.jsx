@@ -168,8 +168,7 @@ const SelectionPage = () => {
           <a
             href="https://www.netflix.com/tudum"
             target="_blank"
-            className="read-more-link"
-          >
+            className="read-more-link">
             Read about Netflix TV shows and movies and watch bonus videos on
             Tudum.com.
           </a>
