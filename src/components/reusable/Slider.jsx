@@ -5,8 +5,8 @@ import MovieCard from "./MovieCard";
 
 const Slider = ({ movie_array, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(0);
-  const [totalMoviesShown, setTotalMoviesShown] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(20);
+  const [totalMoviesShown, setTotalMoviesShown] = useState(movie_array.length);
 
   const onSliderClicked = (direction) => {
     if (direction === "left" && sliderIndex > 0) {
@@ -53,12 +53,7 @@ const Slider = ({ movie_array, title }) => {
     };
 
     onWidthChange();
-
     window.addEventListener("resize", onWidthChange);
-
-    return () => {
-      window.removeEventListener("resize", onWidthChange);
-    };
   }, []);
 
   const sliderStyle = {
