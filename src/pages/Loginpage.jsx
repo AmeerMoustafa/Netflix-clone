@@ -32,10 +32,10 @@ const Loginpage = () => {
             </p>
           </div>
           <div className="tv-image-container">
-            <img className="tv-image" src="./src/assets/loginpage/tv.png" />
+            <img className="tv-image" src="/assets/loginpage/tv.png" />
             <video
               className="tv-video"
-              src="./src/assets/loginpage/tv-video.m4v"
+              src="/assets/loginpage/tv-video.m4v"
               autoPlay
               loop
               muted
@@ -48,14 +48,14 @@ const Loginpage = () => {
       <section className="flex parent-container">
         <div className="flex downloads-child-container child-container">
           <div className="download-image-container">
-            <img src="./src/assets/loginpage/downloading-image.jpg" />
+            <img src="/assets/loginpage/downloading-image.jpg" />
             <div className="flex download-overlay-container">
-              <img src="./src/assets/loginpage/downloads-boxshot.png" />
+              <img src="/assets/loginpage/downloads-boxshot.png" />
               <div className="flex-col download-overlay-content">
                 <span className="overlay-title">Stranger Things</span>
                 <span className="overlay-subtitle">Downloading...</span>
               </div>
-              <img src="./src/assets/loginpage/download-icon.gif" />
+              <img src="/assets/loginpage/download-icon.gif" />
             </div>
           </div>
           <div className="flex-col downloads-content-container feature-content-container">
@@ -80,10 +80,10 @@ const Loginpage = () => {
           </div>
 
           <div className="watch-image-container">
-            <img src="./src/assets/loginpage/device-pile.png" />
+            <img src="/assets/loginpage/device-pile.png" />
             <video
               className="watch-video"
-              src="./src/assets/loginpage/watch-everywhere.m4v"
+              src="/assets/loginpage/watch-everywhere.m4v"
               autoPlay
               loop
             />
@@ -94,7 +94,7 @@ const Loginpage = () => {
       {/* kids section */}
       <section className="flex parent-container">
         <div className="flex kids-section-child child-container">
-          <img src="./src/assets/loginpage/kids-image.png" />
+          <img src="/assets/loginpage/kids-image.png" />
           <div className="flex-col feature-content-container">
             <h2>Create profiles for kids</h2>
             <p>

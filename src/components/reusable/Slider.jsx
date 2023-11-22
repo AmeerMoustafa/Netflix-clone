@@ -82,7 +82,7 @@ const Slider = ({ movie_array, title }) => {
           className="slider-action left flex"
           onClick={() => onSliderClicked("left")}>
           <img
-            src="./src/assets/selectionpage/arrow-left.svg"
+            src="/assets/selectionpage/arrow-left.svg"
             alt="Left Arrow"
           />
         </div>
@@ -95,7 +95,7 @@ const Slider = ({ movie_array, title }) => {
           className="slider-action right flex"
           onClick={() => onSliderClicked("right")}>
           <img
-            src="./src/assets/selectionpage/arrow-right.svg"
+            src="/assets/selectionpage/arrow-right.svg"
             alt="Right Arrow"
           />
         </div>
