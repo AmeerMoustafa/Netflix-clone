@@ -14,7 +14,6 @@ const Slider = ({ movie_array, title }) => {
     } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
       setSliderIndex((prevIndex) => prevIndex + 1);
     }
-    
   };
 
   useEffect(() => {
@@ -42,11 +41,6 @@ const Slider = ({ movie_array, title }) => {
           setSliderIndex(0);
           newSliderWidth = 40;
           newTotalMoviesShown = 10;
-          break;
-        case newScreenWidth > 80:
-          setSliderIndex(0);
-          newSliderWidth = 20;
-          newTotalMoviesShown = movie_array.length;
           break;
         default:
           setSliderIndex(0);
@@ -79,10 +73,7 @@ const Slider = ({ movie_array, title }) => {
         <div
           className="slider-action left flex"
           onClick={() => onSliderClicked("left")}>
-          <img
-            src="/assets/selectionpage/arrow-left.svg"
-            alt="Left Arrow"
-          />
+          <img src="/assets/selectionpage/arrow-left.svg" alt="Left Arrow" />
         </div>
         <div className="slider-container flex" style={sliderStyle}>
           {movie_array.map((movie, index) => (
@@ -92,10 +83,7 @@ const Slider = ({ movie_array, title }) => {
         <div
           className="slider-action right flex"
           onClick={() => onSliderClicked("right")}>
-          <img
-            src="/assets/selectionpage/arrow-right.svg"
-            alt="Right Arrow"
-          />
+          <img src="/assets/selectionpage/arrow-right.svg" alt="Right Arrow" />
         </div>
       </div>
     </div>
