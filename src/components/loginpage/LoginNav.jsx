@@ -4,7 +4,7 @@ const LoginNav = () => {
   return (
     <nav className="flex navbar-parent">
       <div className="navbar-logo-container">
-        <img src="/src/assets/loginpage/netflixlogo.svg" />
+        <img src="/assets/loginpage/netflixlogo.svg" />
       </div>
       <div className="flex navbar-signin-container">
         <select>
