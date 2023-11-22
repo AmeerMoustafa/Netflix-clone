@@ -36,7 +36,7 @@
   border-radius: 2px;
   font-weight: 400;
   text-align: center;
-  min-width: 7rem;
+  min-width: 5rem;
   height: 2rem;
 }
 
@@ -48,4 +48,20 @@
   text-align: center;
   min-width: 4.6rem;
   height: 2rem;
+}
+
+/* Media */
+
+@media screen and (max-width: 670px) {
+  .nav-right > span {
+    display: none;
+  }
+  .nav-right {
+    display: block;
+    align-items: flex-end;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
 }

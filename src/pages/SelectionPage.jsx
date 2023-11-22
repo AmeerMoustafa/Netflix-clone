@@ -43,45 +43,6 @@ const SelectionPage = () => {
     }
   };
 
-  const getActionMovies = async () => {
-    try {
-      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=28`;
-      const results = await fetch(getMovieByGenreURL, options);
-      const data = await results.json();
-      setActionArray(data.results);
-    } catch (err) {
-      console.error(
-        "Error getting action movies from API, check your connection and try again later"
-      );
-    }
-  };
-
-  const getRomanticMovies = async () => {
-    try {
-      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10749`;
-      const response = await fetch(getMovieByGenreURL, options);
-      const data = await response.json();
-      setRomanticArray(data.results);
-    } catch (err) {
-      console.error(
-        "Error getting romantic movies from API, check your connection and try again later"
-      );
-    }
-  };
-
-  const getComedyMovies = async () => {
-    try {
-      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=35`;
-      const response = await fetch(getMovieByGenreURL, options);
-      const data = await response.json();
-      setComedyArray(data.results);
-    } catch (err) {
-      console.error(
-        "Error getting comedy movies from API, check your connection and try again later"
-      );
-    }
-  };
-
   const getHollywoodMovies = async () => {
     try {
       const getMovieByGenreURL =
@@ -111,25 +72,14 @@ const SelectionPage = () => {
     }
   };
 
-  const getFamilyMovies = async () => {
+  const getMovieByGenre = async (genreID) => {
     try {
-      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=10751`;
+      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=${genreID}`;
+      console.log(getMovieByGenreURL);
       const response = await fetch(getMovieByGenreURL, options);
       const data = await response.json();
-      setFamilyArray(data.results);
-    } catch (err) {
-      console.error(
-        "Error getting family movies from API, please check your connection and try again later"
-      );
-    }
-  };
-
-  const getHorrorMovies = async () => {
-    try {
-      const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=27`;
-      const response = await fetch(getMovieByGenreURL, options);
-      const data = await response.json();
-      setHorrorArray(data.results);
+      setArray(data.results, genreID);
+      console.log(genreID);
     } catch (err) {
       console.error(
         "Error getting horror movies from API, please check your connection and try again later"
@@ -137,19 +87,42 @@ const SelectionPage = () => {
     }
   };
 
+  const setArray = (data, genreID) => {
+    switch (genreID) {
+      case 28:
+        setActionArray(data);
+        break;
+      case 10749:
+        setRomanticArray(data);
+        break;
+      case 35:
+        setComedyArray(data);
+        break;
+      case [12, 28]:
+        setActionAndAdv(data);
+        break;
+      case 10751:
+        setFamilyArray(data);
+        break;
+      case 27:
+        setHorrorArray(data);
+        break;
+    }
+  };
+
   const callAPI = async () => {
-   await getPopularMovies();
-   await getRomanticMovies();
-   await getComedyMovies();
-   await getActionMovies();
-   await getHollywoodMovies();
-   await getActionAndAdventureMovies();
-   await getFamilyMovies();
-   await getHorrorMovies();
+    await getPopularMovies(); // Popular Movies
+    await getMovieByGenre(28); // action Movies
+    await getMovieByGenre(10749); // Romantic Movie
+    await getMovieByGenre(35); // Comedy Movies
+    await getActionAndAdventureMovies(); // Action + Adventure Movies
+    await getMovieByGenre(10751); // Family Movies
+    await getMovieByGenre(27); // Horro Movies
+    await getHollywoodMovies(); // Hollywood Movies
   };
 
   useEffect(() => {
-    callAPI()
+    callAPI();
   }, []);
 
   return (
@@ -177,7 +150,7 @@ const SelectionPage = () => {
         <div className="blurred-sliders">
           <div className="blurred"></div>
           <Slider movie_array={popularArray} />
-          <Slider movie_array={popularArray} />
+          <Slider movie_array={actionArray} />
         </div>
 
         <div className="bottom-container">
@@ -195,8 +168,7 @@ const SelectionPage = () => {
           <a
             href="https://www.netflix.com/tudum"
             target="_blank"
-            className="read-more-link"
-          >
+            className="read-more-link">
             Read about Netflix TV shows and movies and watch bonus videos on
             Tudum.com.
           </a>

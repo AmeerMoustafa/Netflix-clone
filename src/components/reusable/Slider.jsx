@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import "../../styles/reusablecomponents/slider.css";
 import "../../styles/utilities.css";
