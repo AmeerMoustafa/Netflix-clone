@@ -177,6 +177,11 @@
   cursor: pointer;
 }
 
+.red{
+  color: var(--main-red);
+  font-style: italic;
+}
+
 /* ComingSoon Component */
 
 .comingsoon {
