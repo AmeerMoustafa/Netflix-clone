@@ -51,8 +51,8 @@ const Slider = ({ movie_array, title }) => {
           break;
         default:
           setSliderIndex(0);
-          newSliderWidth = 100;
-          newTotalMoviesShown = 4;
+          newSliderWidth = 20;
+          newTotalMoviesShown = movie_array.length;
           break;
       }
       setScreenWidth(newSliderWidth);
