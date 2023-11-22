@@ -25,26 +25,32 @@ const Slider = ({ movie_array, title }) => {
       let newSliderWidth = 0;
       switch (true) {
         case newScreenWidth >= 1700:
+          setSliderIndex(0);
           newSliderWidth = 100;
           newTotalMoviesShown = 4;
           break;
         case newScreenWidth > 1200:
+          setSliderIndex(0);
           newSliderWidth = 80;
           newTotalMoviesShown = 5;
           break;
         case newScreenWidth > 960:
+          setSliderIndex(0);
           newSliderWidth = 60;
           newTotalMoviesShown = 7;
           break;
         case newScreenWidth > 480:
+          setSliderIndex(0);
           newSliderWidth = 40;
           newTotalMoviesShown = 10;
           break;
         case newScreenWidth > 80:
+          setSliderIndex(0);
           newSliderWidth = 20;
           newTotalMoviesShown = movie_array.length;
           break;
         default:
+          setSliderIndex(0);
           newSliderWidth = 100;
           newTotalMoviesShown = 4;
           break;
