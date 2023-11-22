@@ -37,8 +37,8 @@ const MoreDetails = ({ movie, allcasts }) => {
 
         <div className="flex-col details-row">
           <div className="sub-title">Audio</div>
-          <div>{movie_languages?.map((language) => {
-            return <p>{language.name}</p>
+          <div>{movie_languages?.map((language , index) => {
+            return <p key={index}>{language.name}</p>
           })}</div>
         </div>
 

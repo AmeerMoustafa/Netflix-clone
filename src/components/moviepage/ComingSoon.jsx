@@ -10,8 +10,8 @@ const ComingSoon = ({ upcomingArray , handleClick}) => {
         <h2>Coming Soon</h2>
         <div className="comingsoon-container flex">
           {/* Upcoming Movies */}
-          {upcomingArray.map((movie) => (
-              <div className="more-movies" onClick={() => handleClick(movie.id)}>
+          {upcomingArray.map((movie , index) => (
+              <div key={index} className="more-movies" onClick={() => handleClick(movie.id)}>
                 <p className="movie-names">{movie.original_title} </p>
                 <p className="movie-description">{movie.overview}</p>
               </div>

@@ -19,7 +19,7 @@ const MovieDescription = ({ movie, casts }) => {
         <div className="hero-container flex-col">
           <div className="hero-details">
             <img
-              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              src={checkPosterPath}
               alt="Movie Logo"
             />
             <h2 className="hero-title">{movie.original_title}</h2>

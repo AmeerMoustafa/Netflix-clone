@@ -231,6 +231,7 @@
 /* Responsive */
 
 @media (max-width: 600px) {
+  
   .hero-container {
     width: 100%;
   }
@@ -242,14 +243,6 @@
 
   .morelikethis-container {
     width: 100%;
-  }
-
-  .comingsoon-title {
-    font-size: 1.2rem;
-  }
-
-  .moredetails {
-    margin: 1rem;
   }
 
   
