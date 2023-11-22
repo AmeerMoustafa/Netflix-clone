@@ -3,6 +3,7 @@ import "../../styles/moviepage.css";
 import { getMovieDuration } from "../../core/utilities";
 
 const MovieDescription = ({ movie, casts }) => {
+  console.log(movie)
   const changeBackground = {
     backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
   };

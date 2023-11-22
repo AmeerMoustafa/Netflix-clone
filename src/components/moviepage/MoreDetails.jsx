@@ -2,11 +2,11 @@ import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
 import Castlist from "./castlist";
 
-const MoreDetails = ({ movie, casts, allcasts }) => {
-  const c = allcasts.slice(0, 16);
-  console.log(movie.genres);
+const MoreDetails = ({ movie, allcasts }) => {
+  const cast_list = allcasts.slice(0, 16);
 
-  console.log(c);
+  const movie_languages = movie.spoken_languages
+  
   return (
     <div className="moredetails">
       <div className="small-description">
@@ -35,17 +35,25 @@ const MoreDetails = ({ movie, casts, allcasts }) => {
           </div>
         </div>
 
+        <div className="flex-col details-row">
+          <div className="sub-title">Audio</div>
+          <div>{movie_languages?.map((language) => {
+            return <p>{language.name}</p>
+          })}</div>
+        </div>
+
         <div className="movietype details-part">
           <div className="sub-title">this movie is</div>
-          <p></p>
+          <p>Violent</p>
         </div>
       </div>
       <br></br>
       <div className="details-row">
         <div className="sub-title">cast</div>
+        
 
-        <div className="cast-conatiner flex"></div>
-        <Castlist cast={c}></Castlist>
+        <div className="cast-container flex"></div>
+        <Castlist cast={cast_list}></Castlist>
       </div>
     </div>
   );

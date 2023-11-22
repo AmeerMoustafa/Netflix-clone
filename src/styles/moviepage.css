@@ -129,28 +129,30 @@
   font-size: 1.5em;
 }
 
-.details-part{
-  min-width: 30%;
-}
+
 .sub-title{
   color: #777;
 }
+
+
 .details-row{
   gap: 5%;
-  min-width: 100%;
+  
 }
+
+
 .genres-container{
   display: flex;
   flex-wrap: wrap;
 }
 
-.cast-conatiner{ 
+.cast-container{ 
   align-items: center;
+  justify-content: space-evenly;
+  
 }
-.cast1{
-  display: flex;
-  flex-direction: column;
-}
+
+
 /* MoreLikeThis Component */
 
 .morelikethis {
@@ -218,7 +220,7 @@
 }
 
 .movie-casts{
-  gap: 20%;
+  gap: 16.7%;
 }
 
 /* Responsive */

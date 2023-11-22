@@ -37,8 +37,7 @@ function Moviepage() {
     const url = `https://api.themoviedb.org/3/movie/${movieID}/recommendations?language=en-US&page=1`;
     const response = await fetch(url, options);
     const data = await response.json();
-    const sliced_array = data.results.slice(0, 12);
-    console.log(sliced_array);
+    const sliced_array = await data.results.slice(0, 12);
     setRecomArray(sliced_array);
   };
 
