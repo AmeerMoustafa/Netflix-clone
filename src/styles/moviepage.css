@@ -226,31 +226,46 @@
 /* Responsive */
 
 @media (max-width: 600px) {
-  .hero {
-    height: 60vh;
-  }
+  
   .hero-container {
     width: 100%;
   }
+
+  .morelikethis {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .morelikethis-container {
+    width: 100%;
+  }
+
+  
   .hero-description,
   .hero-starring {
-    font-size: 0.5em;
+    font-size: 1rem;
   }
+
   .hero-nav-left span {
     font-size: 0.7em;
   }
-  .comingsoon {
-    margin: 1em;
+
+  .comingsoon-container {
+    gap: 1rem;
   }
-  .morelikethis {
-    margin: 1em;
+
+  .details-row {
+    flex-wrap: wrap;
   }
+
+  .movie-casts {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+    
   .more-movies {
     flex-basis: 50%;
-    margin: 5% 0;
-  }
-  .morelikethis-container img {
-    flex-basis: 48%;
   }
   .tudum-promote {
     width: 50%;
