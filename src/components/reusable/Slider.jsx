@@ -5,22 +5,65 @@ import MovieCard from "./MovieCard";
 
 const Slider = ({ movie_array, title }) => {
   const [sliderIndex, setSliderIndex] = useState(0);
-  const sliderItemWidth = 20;
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [totalMoviesShown, setTotalMoviesShown] = useState(0);
 
   const onSliderClicked = (direction) => {
-    const totalMoviesShown = Math.ceil(100 / sliderItemWidth);
     if (direction === "left" && sliderIndex > 0) {
       setSliderIndex((prevIndex) => prevIndex - 1);
-    } else if (
-      direction === "right" &&
-      sliderIndex < movie_array.length / totalMoviesShown - 1
-    ) {
+    } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
       setSliderIndex((prevIndex) => prevIndex + 1);
     }
+    console.log(totalMoviesShown);
   };
 
+  useEffect(() => {
+    const onWidthChange = () => {
+      const newScreenWidth = window.innerWidth;
+      let newTotalMoviesShown = 0;
+      let newSliderWidth = 0;
+      switch (true) {
+        case newScreenWidth >= 1700:
+          newSliderWidth = 100;
+          newTotalMoviesShown = 4;
+          break;
+        case newScreenWidth > 1200:
+          newSliderWidth = 80;
+          newTotalMoviesShown = 5;
+          break;
+        case newScreenWidth > 960:
+          newSliderWidth = 60;
+          newTotalMoviesShown = 7;
+          break;
+        case newScreenWidth > 480:
+          newSliderWidth = 40;
+          newTotalMoviesShown = 10;
+          break;
+        case newScreenWidth > 80:
+          newSliderWidth = 20;
+          newTotalMoviesShown = movie_array.length;
+          break;
+        default:
+          newSliderWidth = 100;
+          newTotalMoviesShown = 4;
+          break;
+      }
+      setScreenWidth(newSliderWidth);
+      setTotalMoviesShown(newTotalMoviesShown);
+    };
+
+    onWidthChange();
+
+    window.addEventListener("resize", onWidthChange);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", onWidthChange);
+    };
+  }, []);
+
   const sliderStyle = {
-    transform: `translateX(calc(${sliderIndex * -100}%))`,
+    transform: `translateX(calc(${sliderIndex * -screenWidth}%))`,
     transition: "transform 0.4s ease-in-out",
   };
 
