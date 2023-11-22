@@ -10,8 +10,6 @@ const apiKey =
   "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZTFjZGY1YmYzNTdjMTJjMzNmMGRkNTc1MDU4YTI1YyIsInN1YiI6IjY1NThmM2U4YjU0MDAyMTRjZjM5ZjEzYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GRAJBNXxK0rODxMyrd9a7IxiyJonE0jpKGUPC6MbrSw";
 const popularMoviesLink =
   "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
-const getGenresLink =
-  "https://api.themoviedb.org/3/genre/movie/list?language=en";
 
 const options = {
   method: "GET",

@@ -3,9 +3,15 @@ import "../../styles/moviepage.css";
 import { getMovieDuration } from "../../core/utilities";
 
 const MovieDescription = ({ movie, casts }) => {
-  console.log(movie)
+  const checkBackdropPath = movie.backdrop_path
+    ? `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`
+    : "url(../../../../noImage.jpg)";
+  const checkPosterPath = movie.poster_path
+    ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
+    : "../../../../noImage.jpg";
+
   const changeBackground = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+    backgroundImage: `${checkBackdropPath}`,
   };
   return (
     <div className="moviedescription">
