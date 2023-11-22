@@ -1,7 +1,5 @@
 import "../../styles/utilities.css";
 import "../../styles/moviepage.css";
-import { Link } from "react-router-dom";
-import {refreshPage} from "../../core/utilities"
 
 const ComingSoon = ({ upcomingArray , handleClick}) => {
   return (
