@@ -404,6 +404,10 @@
     gap: 0.3rem;
   }
 
+  .overlay-title {
+    font-size: 0.5rem;
+  }
+
   .download-image-container {
     width: 100%;
   }
