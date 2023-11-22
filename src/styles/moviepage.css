@@ -220,6 +220,10 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+.movie-casts{
+  gap: 20%;
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {

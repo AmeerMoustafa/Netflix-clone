@@ -4,6 +4,7 @@ import Castlist from "./castlist";
 
 const MoreDetails = ({ movie, casts, allcasts }) => {
   const c = allcasts.slice(0, 16);
+  console.log(movie.genres);
 
   console.log(c);
   return (
@@ -30,7 +31,7 @@ const MoreDetails = ({ movie, casts, allcasts }) => {
         <div className="genres details-part">
           <div className="sub-title">genres</div>
           <div className="genres-container">
-            {movie.genres.map((genre, index) => (
+            {movie.genres?.map((genre, index) => (
               <p key={index}>
                 {genre.name} {index < movie.genres.length - 1 && ","}
               </p>
