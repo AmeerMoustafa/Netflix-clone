@@ -14,6 +14,7 @@ function Moviepage() {
   const navigate = useNavigate();
   const [movie, setMovie] = useState({});
   const [casts, setCasts] = useState([]);
+  const [allcasts, setallCasts] = useState([]);
   const [recomArray, setRecomArray] = useState([]);
   const [upcomingArray, setUpcomingArray] = useState([]);
 
@@ -45,6 +46,7 @@ function Moviepage() {
     const url = `https://api.themoviedb.org/3/movie/${movieID}/credits`;
     const response = await fetch(url, options);
     const data = await response.json();
+    setallCasts(data.cast)
     const sliced_array = data.cast.slice(0, 4);
     setCasts(sliced_array);
   };
@@ -72,15 +74,9 @@ function Moviepage() {
     <div className="moviepage">
       <Navbar />
       <MovieDescription movie={movie} casts={casts}></MovieDescription>
-      <MoreDetails movie={movie} />
-      <MoreLikeThis
-        recomArray={recomArray}
-        handleClick={handleClick}
-      ></MoreLikeThis>
-      <ComingSoon
-        upcomingArray={upcomingArray}
-        handleClick={handleClick}
-      ></ComingSoon>
+      <MoreDetails movie={movie} casts={casts} allcasts={allcasts}></MoreDetails>
+      <MoreLikeThis recomArray={recomArray}></MoreLikeThis>
+      <ComingSoon upcomingArray={upcomingArray}></ComingSoon>
       <Footer />
     </div>
   );

@@ -129,6 +129,28 @@
   font-size: 1.5em;
 }
 
+.details-part{
+  min-width: 30%;
+}
+.sub-title{
+  color: #777;
+}
+.details-row{
+  gap: 5%;
+  min-width: 100%;
+}
+.genres-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cast-conatiner{ 
+  align-items: center;
+}
+.cast1{
+  display: flex;
+  flex-direction: column;
+}
 /* MoreLikeThis Component */
 
 .morelikethis {
