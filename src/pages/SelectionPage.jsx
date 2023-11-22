@@ -73,11 +73,9 @@ const SelectionPage = () => {
   const getMovieByGenre = async (genreID) => {
     try {
       const getMovieByGenreURL = `https://api.themoviedb.org/3/discover/movie?with_genres=${genreID}`;
-      console.log(getMovieByGenreURL);
       const response = await fetch(getMovieByGenreURL, options);
       const data = await response.json();
       setArray(data.results, genreID);
-      console.log(genreID);
     } catch (err) {
       console.error(
         "Error getting horror movies from API, please check your connection and try again later"

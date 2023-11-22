@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import "../../styles/reusablecomponents/slider.css";
 import "../../styles/utilities.css";
@@ -15,7 +14,7 @@ const Slider = ({ movie_array, title }) => {
     } else if (direction === "right" && sliderIndex < totalMoviesShown - 1) {
       setSliderIndex((prevIndex) => prevIndex + 1);
     }
-    console.log(totalMoviesShown);
+    
   };
 
   useEffect(() => {
@@ -63,7 +62,6 @@ const Slider = ({ movie_array, title }) => {
 
     window.addEventListener("resize", onWidthChange);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", onWidthChange);
     };
