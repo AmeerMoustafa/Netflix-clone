@@ -75,8 +75,8 @@ function Moviepage() {
       <Navbar />
       <MovieDescription movie={movie} casts={casts}></MovieDescription>
       <MoreDetails movie={movie} casts={casts} allcasts={allcasts}></MoreDetails>
-      <MoreLikeThis recomArray={recomArray}></MoreLikeThis>
-      <ComingSoon upcomingArray={upcomingArray}></ComingSoon>
+      <MoreLikeThis recomArray={recomArray} handleClick={handleClick}></MoreLikeThis>
+      <ComingSoon upcomingArray={upcomingArray} handleClick={handleClick}></ComingSoon>
       <Footer />
     </div>
   );

@@ -217,6 +217,10 @@
   width: 25%;
 }
 
+.movie-casts{
+  gap: 20%;
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {
